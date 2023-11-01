@@ -1,0 +1,13 @@
+const path = require('path')
+
+const inputPath = path.resolve(__dirname, './src/index.js')
+const outputPath = path.resolve(__dirname, './dist/datav-libs.js')
+
+module.exports = {
+  input: inputPath,
+  output: {
+    file: outputPath,
+    format: 'umd',
+    name: 'datavLibs'
+  }
+}
