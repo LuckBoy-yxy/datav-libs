@@ -5,8 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>datav libs example</title>
   <script src="../dist/datav-libs.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-  
+  <div id="app">
+    {{ msg }}
+    <test-com></test-com>
+  </div>
+  <script>
+    Vue.createApp({
+      setup() {
+        const msg = '大帅'
+
+        return {
+          msg
+        }
+      }
+    }).use(datavLibs).mount('#app')
+  </script>
 </body>
 </html>

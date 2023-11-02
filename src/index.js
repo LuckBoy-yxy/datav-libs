@@ -1,5 +1,5 @@
 import Test from './Test.vue'
 
-export default function(app) {
-  app.component(Test.name, Test)
+export default function(Vue) {
+  Vue.component(Test.name, Test)
 }

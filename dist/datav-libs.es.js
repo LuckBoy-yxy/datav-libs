@@ -1,10 +1,14 @@
-import { ref, openBlock, createElementBlock, toDisplayString } from 'vue';
+import { openBlock, createElementBlock, toDisplayString } from 'vue';
 
 //
+//
+//
+//
+
 var script = {
   name: 'TestCom',
   setup: function setup() {
-    var message = ref('大帅');
+    var message = '大帅';
     return {
       message: message
     };
@@ -51,8 +55,8 @@ script.render = render;
 script.__scopeId = "data-v-07bdddea";
 script.__file = "src/Test.vue";
 
-function index (app) {
-  app.component(script.name, script);
+function index (Vue) {
+  Vue.component(script.name, script);
 }
 
 export default index;

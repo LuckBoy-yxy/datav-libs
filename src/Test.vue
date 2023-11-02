@@ -3,12 +3,10 @@
 </template>
 
 <script>
-  import { ref } from 'vue'
-
   export default {
     name: 'TestCom',
     setup() {
-      const message = ref('大帅')
+      const message = '大帅'
 
       return {
         message

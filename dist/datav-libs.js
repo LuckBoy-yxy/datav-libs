@@ -1,14 +1,18 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('vue')) :
   typeof define === 'function' && define.amd ? define(['vue'], factory) :
-  (global = global || self, global.datavLibs = factory(global.vue));
+  (global = global || self, global.datavLibs = factory(global.Vue));
 }(this, (function (vue) { 'use strict';
 
   //
+  //
+  //
+  //
+
   var script = {
     name: 'TestCom',
     setup: function setup() {
-      var message = vue.ref('大帅');
+      var message = '大帅';
       return {
         message: message
       };
@@ -55,8 +59,8 @@
   script.__scopeId = "data-v-07bdddea";
   script.__file = "src/Test.vue";
 
-  function index (app) {
-    app.component(script.name, script);
+  function index (Vue) {
+    Vue.component(script.name, script);
   }
 
   return index;
