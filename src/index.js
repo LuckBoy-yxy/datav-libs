@@ -1,5 +1,10 @@
-import * as data from 'sam-test-data'
+import pkg from '../package.json'
 
-console.log(data.random(), data.a, data.b)
+const fn = () => {
+  return 111
+}
+
+console.log(fn())
+console.log(pkg)
 
 export default {}
