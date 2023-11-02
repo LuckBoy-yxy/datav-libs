@@ -1,1 +1,64 @@
-!function(e,o){"object"==typeof exports&&"undefined"!=typeof module?module.exports=o():"function"==typeof define&&define.amd?define(o):(e=e||self).datavLibs=o()}(this,(function(){"use strict";var e={name:"datav-libs",version:"1.0.0",description:"datav-screen components library",main:"index.js",scripts:{dev:"rollup -wc rollup.config.dev.js",build:"rollup -c rollup.config.dev.js","build:prod":"rollup -c rollup.config.prod.js"},author:"hmxs_hmbb <hmxs_hmbb@163.com>",license:"ISC",devDependencies:{"@babel/preset-env":"^7.23.2",rollup:"^2.16.1","rollup-plugin-babel":"^4.4.0","rollup-plugin-commonjs":"^10.1.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-terser":"^7.0.2","sam-test-data":"^0.0.5"}};console.log(111),console.log(e);return{}}));
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('vue')) :
+  typeof define === 'function' && define.amd ? define(['vue'], factory) :
+  (global = global || self, global.datavLibs = factory(global.vue));
+}(this, (function (vue) { 'use strict';
+
+  //
+  var script = {
+    name: 'TestCom',
+    setup: function setup() {
+      var message = vue.ref('大帅');
+      return {
+        message: message
+      };
+    }
+  };
+
+  const _hoisted_1 = { class: "test" };
+
+  function render(_ctx, _cache) {
+    return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1, vue.toDisplayString(_ctx.message), 1 /* TEXT */))
+  }
+
+  function styleInject(css, ref) {
+    if ( ref === void 0 ) ref = {};
+    var insertAt = ref.insertAt;
+
+    if (!css || typeof document === 'undefined') { return; }
+
+    var head = document.head || document.getElementsByTagName('head')[0];
+    var style = document.createElement('style');
+    style.type = 'text/css';
+
+    if (insertAt === 'top') {
+      if (head.firstChild) {
+        head.insertBefore(style, head.firstChild);
+      } else {
+        head.appendChild(style);
+      }
+    } else {
+      head.appendChild(style);
+    }
+
+    if (style.styleSheet) {
+      style.styleSheet.cssText = css;
+    } else {
+      style.appendChild(document.createTextNode(css));
+    }
+  }
+
+  var css_248z = ".test[data-v-07bdddea] {\n  color: skyblue;\n}";
+  styleInject(css_248z);
+
+  script.render = render;
+  script.__scopeId = "data-v-07bdddea";
+  script.__file = "src/Test.vue";
+
+  function index (app) {
+    app.component(script.name, script);
+  }
+
+  return index;
+
+})));

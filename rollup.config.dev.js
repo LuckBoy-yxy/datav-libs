@@ -3,6 +3,8 @@ const resolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
 const babel = require('rollup-plugin-babel')
 const json = require('rollup-plugin-json')
+const vue = require('rollup-plugin-vue')
+const postcss = require('rollup-plugin-postcss')
 
 const inputPath = path.resolve(__dirname, './src/index.js')
 const outputUmdPath = path.resolve(__dirname, './dist/datav-libs.js')
@@ -14,11 +16,17 @@ module.exports = {
     {
       file: outputUmdPath,
       format: 'umd',
-      name: 'datavLibs'
+      name: 'datavLibs',
+      globals: {
+        vue: 'vue'
+      }
     },
     {
       file: outputEsPath,
-      format: 'es'
+      format: 'es',
+      globals: {
+        vue: 'vue'
+      }
     }
   ],
   plugins: [
@@ -27,7 +35,11 @@ module.exports = {
     babel({
       exclude: 'node_modules/**'
     }),
-    json()
+    json(),
+    vue(),
+    postcss({
+      plugins: []
+    })
   ],
   external: ['vue']
 }

@@ -1,10 +1,5 @@
-import pkg from '../package.json'
+import Test from './Test.vue'
 
-const fn = () => {
-  return 111
+export default function(app) {
+  app.component(Test.name, Test)
 }
-
-console.log(fn())
-console.log(pkg)
-
-export default {}
