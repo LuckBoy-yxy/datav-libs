@@ -4,11 +4,17 @@
   "description": "datav-screen components library",
   "main": "index.js",
   "scripts": {
-    "dev": "rollup -wc rollup.config.dev.js"
+    "dev": "rollup -wc rollup.config.dev.js",
+    "build": "rollup -c rollup.config.dev.js"
   },
   "author": "hmxs_hmbb <hmxs_hmbb@163.com>",
   "license": "ISC",
   "devDependencies": {
-    "rollup": "^2.16.1"
+    "@babel/preset-env": "^7.23.2",
+    "rollup": "^2.16.1",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "dependencies": {
+    "sam-test-data": "^0.0.5"
   }
 }

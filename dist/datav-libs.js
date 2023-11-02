@@ -1,13 +1,23 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) :
-	(global = global || self, global.datavLibs = factory());
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+  typeof define === 'function' && define.amd ? define(factory) :
+  (global = global || self, global.datavLibs = factory());
 }(this, (function () { 'use strict';
 
-	console.log('大帅!');
+  var a = Math.floor(Math.random() * 10);
+  var b = Math.floor(Math.random() * 100);
+  function random(base) {
+    if (base && base % 1 === 0) {
+      return Math.floor(Math.random() * base);
+    } else {
+      return 0;
+    }
+  }
 
-	var index = {};
+  console.log(random(), a, b);
 
-	return index;
+  var index = {};
+
+  return index;
 
 })));
