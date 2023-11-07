@@ -5,16 +5,18 @@
 }(this, (function (vue) { 'use strict';
 
   //
-  //
-  //
-  //
-
   var script = {
     name: 'TestCom',
     setup: function setup() {
       var message = '大帅';
+      var count = vue.ref(1);
+      var doubleCount = vue.computed(function () {
+        return count.value * 2;
+      });
       return {
-        message: message
+        message: message,
+        count: count,
+        doubleCount: doubleCount
       };
     }
   };
@@ -22,7 +24,14 @@
   const _hoisted_1 = { class: "test" };
 
   function render(_ctx, _cache) {
-    return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1, vue.toDisplayString(_ctx.message), 1 /* TEXT */))
+    return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
+      vue.createElementVNode("div", _hoisted_1, vue.toDisplayString(_ctx.message), 1 /* TEXT */),
+      vue.createElementVNode("div", null, vue.toDisplayString(_ctx.count), 1 /* TEXT */),
+      vue.createElementVNode("div", null, vue.toDisplayString(_ctx.doubleCount), 1 /* TEXT */),
+      vue.createElementVNode("button", {
+        onClick: _cache[0] || (_cache[0] = $event => (_ctx.count++))
+      }, "按钮")
+    ], 64 /* STABLE_FRAGMENT */))
   }
 
   function styleInject(css, ref) {

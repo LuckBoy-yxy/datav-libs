@@ -1,16 +1,18 @@
-import { openBlock, createElementBlock, toDisplayString } from 'vue';
+import { ref, computed, openBlock, createElementBlock, Fragment, createElementVNode, toDisplayString } from 'vue';
 
 //
-//
-//
-//
-
 var script = {
   name: 'TestCom',
   setup: function setup() {
     var message = '大帅';
+    var count = ref(1);
+    var doubleCount = computed(function () {
+      return count.value * 2;
+    });
     return {
-      message: message
+      message: message,
+      count: count,
+      doubleCount: doubleCount
     };
   }
 };
@@ -18,7 +20,14 @@ var script = {
 const _hoisted_1 = { class: "test" };
 
 function render(_ctx, _cache) {
-  return (openBlock(), createElementBlock("div", _hoisted_1, toDisplayString(_ctx.message), 1 /* TEXT */))
+  return (openBlock(), createElementBlock(Fragment, null, [
+    createElementVNode("div", _hoisted_1, toDisplayString(_ctx.message), 1 /* TEXT */),
+    createElementVNode("div", null, toDisplayString(_ctx.count), 1 /* TEXT */),
+    createElementVNode("div", null, toDisplayString(_ctx.doubleCount), 1 /* TEXT */),
+    createElementVNode("button", {
+      onClick: _cache[0] || (_cache[0] = $event => (_ctx.count++))
+    }, "按钮")
+  ], 64 /* STABLE_FRAGMENT */))
 }
 
 function styleInject(css, ref) {
