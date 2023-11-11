@@ -2,17 +2,28 @@
   "name": "datav-libs",
   "version": "1.0.0",
   "description": "datav-screen components library",
-  "main": "index.js",
+  "main": "dist/datav-libs.js",
   "scripts": {
     "dev": "rollup -wc rollup.config.dev.js",
-    "build": "rollup -c rollup.config.dev.js",
-    "build:prod": "rollup -c rollup.config.prod.js"
+    "build": "eslint ./src && rollup -c rollup.config.dev.js",
+    "build:prod": "eslint ./src && rollup -c rollup.config.prod.js",
+    "lint": "eslint ./src"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "vue",
+    "datav"
+  ],
   "author": "hmxs_hmbb <hmxs_hmbb@163.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.23.2",
     "@vue/compiler-sfc": "^3.3.7",
+    "eslint": "^8.53.0",
+    "eslint-plugin-vue": "^9.18.1",
     "rollup": "^2.16.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",

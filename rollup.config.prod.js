@@ -10,7 +10,7 @@ const postcss = require('rollup-plugin-postcss')
 
 const inputPath = path.resolve(__dirname, './src/index.js')
 const outputUmdPath = path.resolve(__dirname, './dist/datav-libs.min.js')
-const outputEsPath = path.resolve(__dirname, './dist/datav-libs.es,min.js')
+const outputEsPath = path.resolve(__dirname, './dist/datav-libs.es.min.js')
 
 module.exports = {
   input: inputPath,
