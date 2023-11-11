@@ -1,18 +1,12 @@
-import { ref, computed, openBlock, createElementBlock, Fragment, createElementVNode, toDisplayString } from 'vue';
+import { ref, openBlock, createElementBlock, toDisplayString } from 'vue';
 
 //
 var script = {
   name: 'TestCom',
   setup: function setup() {
-    var message = '大帅';
-    var count = ref(1);
-    var doubleCount = computed(function () {
-      return count.value * 2;
-    });
+    var message = ref('大帅');
     return {
-      message: message,
-      count: count,
-      doubleCount: doubleCount
+      message: message
     };
   }
 };
@@ -20,14 +14,7 @@ var script = {
 const _hoisted_1 = { class: "test" };
 
 function render(_ctx, _cache) {
-  return (openBlock(), createElementBlock(Fragment, null, [
-    createElementVNode("div", _hoisted_1, toDisplayString(_ctx.message), 1 /* TEXT */),
-    createElementVNode("div", null, toDisplayString(_ctx.count), 1 /* TEXT */),
-    createElementVNode("div", null, toDisplayString(_ctx.doubleCount), 1 /* TEXT */),
-    createElementVNode("button", {
-      onClick: _cache[0] || (_cache[0] = $event => (_ctx.count++))
-    }, "按钮")
-  ], 64 /* STABLE_FRAGMENT */))
+  return (openBlock(), createElementBlock("div", _hoisted_1, toDisplayString(_ctx.message), 1 /* TEXT */))
 }
 
 function styleInject(css, ref) {
@@ -57,15 +44,87 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = ".test[data-v-07bdddea] {\n  color: skyblue;\n}";
+var css_248z = ".test[data-v-7cc4288f] {\n  color: skyblue;\n}";
 styleInject(css_248z);
 
 script.render = render;
-script.__scopeId = "data-v-07bdddea";
-script.__file = "src/Test.vue";
+script.__scopeId = "data-v-7cc4288f";
+script.__file = "src/components/Test/Test.vue";
 
-function index (Vue) {
+function Test (Vue) {
   Vue.component(script.name, script);
 }
 
-export default index;
+//
+var script$1 = {
+  name: 'TestCom1',
+  setup: function setup() {
+    var message = ref('中帅');
+    return {
+      message: message
+    };
+  }
+};
+
+const _hoisted_1$1 = { class: "test1" };
+
+function render$1(_ctx, _cache) {
+  return (openBlock(), createElementBlock("div", _hoisted_1$1, toDisplayString(_ctx.message), 1 /* TEXT */))
+}
+
+var css_248z$1 = ".test1[data-v-2165a7e2] {\n  color: deeppink;\n}";
+styleInject(css_248z$1);
+
+script$1.render = render$1;
+script$1.__scopeId = "data-v-2165a7e2";
+script$1.__file = "src/components/Test1/Test1.vue";
+
+function Test1 (Vue) {
+  Vue.component(script$1.name, script$1);
+}
+
+//
+var script$2 = {
+  name: 'TestCom2',
+  setup: function setup() {
+    var message = ref('小帅');
+    return {
+      message: message
+    };
+  }
+};
+
+const _hoisted_1$2 = { class: "test2" };
+
+function render$2(_ctx, _cache) {
+  return (openBlock(), createElementBlock("div", _hoisted_1$2, toDisplayString(_ctx.message), 1 /* TEXT */))
+}
+
+var css_248z$2 = ".test2[data-v-f780135e] {\n  color: lightgreen;\n}";
+styleInject(css_248z$2);
+
+script$2.render = render$2;
+script$2.__scopeId = "data-v-f780135e";
+script$2.__file = "src/components/Test2/Test2.vue";
+
+function Test2 (Vue) {
+  Vue.component(script$2.name, script$2);
+}
+
+// export default function(Vue) {
+//   Vue.use(Test)
+//   Vue.use(Test1)
+//   Vue.use(Test2)
+// }
+
+function test(Vue) {
+  Vue.use(Test);
+}
+function test1(Vue) {
+  Vue.use(Test1);
+}
+function test2(Vue) {
+  Vue.use(Test2);
+}
+
+export { test, test1, test2 };
