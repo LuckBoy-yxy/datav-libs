@@ -1,4 +1,4 @@
-import { ref, openBlock, createElementBlock, toDisplayString } from 'vue';
+import { ref, openBlock, createElementBlock, createStaticVNode, toDisplayString, normalizeStyle, createElementVNode } from 'vue';
 
 //
 var script = {
@@ -11,10 +11,42 @@ var script = {
   }
 };
 
-const _hoisted_1 = { class: "test" };
+const _hoisted_1 = {
+  width: "0",
+  height: "0",
+  viewBox: "0 0 100 100"
+};
+const _hoisted_2 = /*#__PURE__*/createStaticVNode("<defs><symbol id=\"more\" viewBox=\"0 0 100 100\"><circle r=\"5\" cx=\"20\" cy=\"25\" fill=\"currentColor\"></circle><circle r=\"5\" cx=\"20\" cy=\"50\" fill=\"currentColor\"></circle><circle r=\"5\" cx=\"20\" cy=\"75\" fill=\"currentColor\"></circle><line x1=\"40\" y1=\"25\" x2=\"90\" y2=\"25\" stroke-width=\"8\" stroke=\"currentColor\"></line><line x1=\"40\" y1=\"50\" x2=\"75\" y2=\"50\" stroke-width=\"8\" stroke=\"currentColor\"></line><line x1=\"40\" y1=\"75\" x2=\"90\" y2=\"75\" stroke-width=\"8\" stroke=\"currentColor\"></line></symbol><symbol id=\"filledArrowRight\" viewBox=\"0 0 100 100\"><polyline points=\"20 10, 80 50, 20 90\" fill=\"currentColor\"></polyline></symbol><symbol id=\"arrowRight\" viewBox=\"0 0 100 100\"><polyline points=\"20 10, 80 50, 20 90, 20 10\" fill=\"transparent\" stroke=\"currentColor\" stroke-width=\"3\"></polyline></symbol></defs>", 1);
+const _hoisted_3 = [
+  _hoisted_2
+];
 
 function render(_ctx, _cache) {
-  return (openBlock(), createElementBlock("div", _hoisted_1, toDisplayString(_ctx.message), 1 /* TEXT */))
+  return (openBlock(), createElementBlock("svg", _hoisted_1, [..._hoisted_3]))
+}
+
+script.render = render;
+script.__file = "src/components/Test/Test.vue";
+
+function Test (Vue) {
+  Vue.component(script.name, script);
+}
+
+//
+var script$1 = {
+  name: 'TestCom1',
+  setup: function setup() {
+    var message = ref('中帅');
+    return {
+      message: message
+    };
+  }
+};
+
+const _hoisted_1$1 = { class: "test1" };
+
+function render$1(_ctx, _cache) {
+  return (openBlock(), createElementBlock("div", _hoisted_1$1, toDisplayString(_ctx.message), 1 /* TEXT */))
 }
 
 function styleInject(css, ref) {
@@ -44,36 +76,8 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = ".test[data-v-7cc4288f] {\n  color: skyblue;\n}";
+var css_248z = ".test1[data-v-2165a7e2] {\n  color: deeppink;\n}";
 styleInject(css_248z);
-
-script.render = render;
-script.__scopeId = "data-v-7cc4288f";
-script.__file = "src/components/Test/Test.vue";
-
-function Test (Vue) {
-  Vue.component(script.name, script);
-}
-
-//
-var script$1 = {
-  name: 'TestCom1',
-  setup: function setup() {
-    var message = ref('中帅');
-    return {
-      message: message
-    };
-  }
-};
-
-const _hoisted_1$1 = { class: "test1" };
-
-function render$1(_ctx, _cache) {
-  return (openBlock(), createElementBlock("div", _hoisted_1$1, toDisplayString(_ctx.message), 1 /* TEXT */))
-}
-
-var css_248z$1 = ".test1[data-v-2165a7e2] {\n  color: deeppink;\n}";
-styleInject(css_248z$1);
 
 script$1.render = render$1;
 script$1.__scopeId = "data-v-2165a7e2";
@@ -100,8 +104,8 @@ function render$2(_ctx, _cache) {
   return (openBlock(), createElementBlock("div", _hoisted_1$2, toDisplayString(_ctx.message), 1 /* TEXT */))
 }
 
-var css_248z$2 = ".test2[data-v-f780135e] {\n  color: lightgreen;\n}";
-styleInject(css_248z$2);
+var css_248z$1 = ".test2[data-v-f780135e] {\n  color: lightgreen;\n}";
+styleInject(css_248z$1);
 
 script$2.render = render$2;
 script$2.__scopeId = "data-v-f780135e";
@@ -111,20 +115,49 @@ function Test2 (Vue) {
   Vue.component(script$2.name, script$2);
 }
 
-// export default function(Vue) {
-//   Vue.use(Test)
-//   Vue.use(Test1)
-//   Vue.use(Test2)
-// }
+//
+//
+//
+//
+//
+//
 
-function test(Vue) {
+var script$3 = {
+  name: 'IconCom',
+  props: {
+    name: String,
+    style: Object
+  },
+  setup: function setup(props) {
+    var iconName = "#".concat(props.name);
+    return {
+      iconName: iconName
+    };
+  }
+};
+
+const _hoisted_1$3 = ["href"];
+
+function render$3(_ctx, _cache) {
+  return (openBlock(), createElementBlock("svg", {
+    style: normalizeStyle({ ..._ctx.style })
+  }, [
+    createElementVNode("use", { href: _ctx.iconName }, null, 8 /* PROPS */, _hoisted_1$3)
+  ], 4 /* STYLE */))
+}
+
+script$3.render = render$3;
+script$3.__file = "src/components/Icon/Icon.vue";
+
+function IconCom (Vue) {
+  Vue.component(script$3.name, script$3);
+}
+
+function index (Vue) {
   Vue.use(Test);
-}
-function test1(Vue) {
   Vue.use(Test1);
-}
-function test2(Vue) {
   Vue.use(Test2);
+  Vue.use(IconCom);
 }
 
-export { test, test1, test2 };
+export default index;
