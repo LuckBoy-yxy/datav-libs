@@ -1,4 +1,4 @@
-import { ref, openBlock, createElementBlock, createElementVNode, toDisplayString, computed, normalizeStyle } from 'vue';
+import { ref, openBlock, createElementBlock, createElementVNode, toDisplayString, computed, normalizeStyle, createStaticVNode } from 'vue';
 
 //
 var script = {
@@ -239,11 +239,87 @@ function IconCom (Vue) {
   Vue.component(script$3.name, script$3);
 }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var script$4 = {
+  name: 'SvgAnimation',
+  setup: function setup() {
+    return {};
+  }
+};
+
+const _hoisted_1$4 = /*#__PURE__*/createStaticVNode("<div class=\"container\" data-v-5a151e4f><svg width=\"500px\" height=\"200px\" viewBox=\"0 0 500 200\" data-v-5a151e4f><rect class=\"rect\" x=\"10\" y=\"10\" width=\"100px\" height=\"50px\" fill=\"none\" stroke-width=\"5\" stroke=\"pink\" data-v-5a151e4f></rect></svg></div><div class=\"container\" data-v-5a151e4f><!-- 这里的 viewBox 和画布的宽高是一样的, 所以可以省略不写 --><svg width=\"440\" height=\"440\" viewBox=\"0 0 440 440\" data-v-5a151e4f><circle cx=\"220\" cy=\"220\" r=\"200\" stroke-width=\"20\" stroke=\"#d1d3d7\" fill=\"transparent\" data-v-5a151e4f></circle><circle class=\"circle\" cx=\"220\" cy=\"220\" r=\"200\" stroke-width=\"20\" stroke=\"#00a5e0\" fill=\"none\" transform=\"matrix(0 -1 1 0 0 440)\" data-v-5a151e4f></circle></svg></div>", 2);
+
+function render$4(_ctx, _cache) {
+  return _hoisted_1$4
+}
+
+var css_248z$3 = ".container[data-v-5a151e4f] svg[data-v-5a151e4f] {\n  border: 1px solid #000;\n}\n\n.rect[data-v-5a151e4f] {\n  stroke-dasharray: 10 20 30;\n}\n\n.circle[data-v-5a151e4f] {\n  animation: circle-5a151e4f 5s linear infinite;\n}\n\n@keyframes circle-5a151e4f {\n  from {\n    stroke-dasharray: 0 1257;\n  }\n  to {\n    stroke-dasharray: 1257 0;\n  }\n}";
+styleInject(css_248z$3);
+
+script$4.render = render$4;
+script$4.__scopeId = "data-v-5a151e4f";
+script$4.__file = "src/components/SvgAnimation/SvgAnimation.vue";
+
+function SvgAnimation (Vue) {
+  Vue.component(script$4.name, script$4);
+}
+
 function index (Vue) {
   Vue.use(Test);
   Vue.use(Test1);
   Vue.use(Test2);
   Vue.use(IconCom);
+  Vue.use(SvgAnimation);
 }
 
 export default index;
