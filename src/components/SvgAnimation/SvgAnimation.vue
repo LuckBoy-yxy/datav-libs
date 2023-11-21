@@ -81,6 +81,80 @@
       ></line>
     </svg>
   </div>
+
+  <div class="container">
+    <svg
+      width="200"
+      height="200"
+    >
+      <rect
+        x="0"
+        y="0"
+        fill="red"
+        width="100"
+        height="50"
+      >
+        <set attributeName="x" attributeType="XML" to="10" begin="1s"></set>
+        <set attributeName="x" attributeType="XML" to="20" begin="2s"></set>
+        <set attributeName="fill" attributeType="XML" to="skyblue" begin="3s"></set>
+      </rect>
+    </svg>
+  </div>
+
+  <div class="container">
+    <svg
+      width="200"
+      height="200"
+    >
+      <circle
+        cx="0"
+        cy="0"
+        r="30"
+        fill="blue"
+        stroke="black"
+        stroke-width="1"
+      >
+        <animate
+          attributeName="cx"
+          attributeType="XML"
+          from="0"
+          to="100"
+          dur="3s"
+          repeatCount="2"
+          fill="freeze"
+        ></animate>
+        <animate
+          attributeName="cy"
+          attributeType="XML"
+          from="0"
+          to="100"
+          dur="3s"
+          repeatCount="2"
+          fill="freeze"
+        ></animate>
+        <animate
+          attributeName="fill"
+          attributeType="XML"
+          from="blue"
+          to="red"
+          dur="3s"
+          repeatCount="2"
+          fill="freeze"
+        ></animate>
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          begin="0"
+          type="scale"
+          from="1"
+          to="2"
+          dur="3s"
+          repeatCount="2"
+          fill="freeze"
+        ></animateTransform>
+      </circle>
+    </svg>
+  </div>
 </template>
 
 <script>
@@ -92,7 +166,6 @@
       onMounted(() => {
         const logo = document.getElementById('emoji')
         const logoLen = Math.ceil(logo.getTotalLength())
-        console.log(logoLen)
       })
 
       return {

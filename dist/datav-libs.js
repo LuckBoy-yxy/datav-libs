@@ -250,7 +250,6 @@
       vue.onMounted(function () {
         var logo = document.getElementById('emoji');
         var logoLen = Math.ceil(logo.getTotalLength());
-        console.log(logoLen);
       });
       return {};
     }
@@ -273,25 +272,7 @@
       })
     ])
   ], -1 /* HOISTED */));
-  const _hoisted_4 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/vue.createElementVNode("div", { class: "container" }, [
-    /*#__PURE__*/vue.createElementVNode("svg", {
-      class: "line-container",
-      width: "400",
-      height: "400",
-      viewBox: "0 0 400 400"
-    }, [
-      /*#__PURE__*/vue.createElementVNode("line", {
-        class: "line",
-        x1: "0",
-        y1: "50",
-        x2: "400",
-        y2: "50",
-        fill: "none",
-        stroke: "red",
-        "stroke-width": "20"
-      })
-    ])
-  ], -1 /* HOISTED */));
+  const _hoisted_4 = /*#__PURE__*/vue.createStaticVNode("<div class=\"container\" data-v-5a151e4f><svg class=\"line-container\" width=\"400\" height=\"400\" viewBox=\"0 0 400 400\" data-v-5a151e4f><line class=\"line\" x1=\"0\" y1=\"50\" x2=\"400\" y2=\"50\" fill=\"none\" stroke=\"red\" stroke-width=\"20\" data-v-5a151e4f></line></svg></div><div class=\"container\" data-v-5a151e4f><svg width=\"200\" height=\"200\" data-v-5a151e4f><rect x=\"0\" y=\"0\" fill=\"red\" width=\"100\" height=\"50\" data-v-5a151e4f><set attributeName=\"x\" attributeType=\"XML\" to=\"10\" begin=\"1s\" data-v-5a151e4f></set><set attributeName=\"x\" attributeType=\"XML\" to=\"20\" begin=\"2s\" data-v-5a151e4f></set><set attributeName=\"fill\" attributeType=\"XML\" to=\"skyblue\" begin=\"3s\" data-v-5a151e4f></set></rect></svg></div><div class=\"container\" data-v-5a151e4f><svg width=\"200\" height=\"200\" data-v-5a151e4f><circle cx=\"0\" cy=\"0\" r=\"30\" fill=\"blue\" stroke=\"black\" stroke-width=\"1\" data-v-5a151e4f><animate attributeName=\"cx\" attributeType=\"XML\" from=\"0\" to=\"100\" dur=\"3s\" repeatCount=\"2\" fill=\"freeze\" data-v-5a151e4f></animate><animate attributeName=\"cy\" attributeType=\"XML\" from=\"0\" to=\"100\" dur=\"3s\" repeatCount=\"2\" fill=\"freeze\" data-v-5a151e4f></animate><animate attributeName=\"fill\" attributeType=\"XML\" from=\"blue\" to=\"red\" dur=\"3s\" repeatCount=\"2\" fill=\"freeze\" data-v-5a151e4f></animate><animateTransform attributeName=\"transform\" attributeType=\"XML\" begin=\"0\" type=\"scale\" from=\"1\" to=\"2\" dur=\"3s\" repeatCount=\"2\" fill=\"freeze\" data-v-5a151e4f></animateTransform></circle></svg></div>", 3);
 
   function render$4(_ctx, _cache) {
     return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
