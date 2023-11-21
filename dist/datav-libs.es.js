@@ -1,4 +1,4 @@
-import { ref, openBlock, createElementBlock, createElementVNode, toDisplayString, computed, normalizeStyle, createStaticVNode } from 'vue';
+import { ref, openBlock, createElementBlock, createElementVNode, toDisplayString, computed, normalizeStyle, onMounted, Fragment, createStaticVNode, pushScopeId, popScopeId } from 'vue';
 
 //
 var script = {
@@ -240,70 +240,64 @@ function IconCom (Vue) {
 }
 
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 var script$4 = {
   name: 'SvgAnimation',
   setup: function setup() {
+    onMounted(function () {
+      var logo = document.getElementById('emoji');
+      var logoLen = Math.ceil(logo.getTotalLength());
+      console.log(logoLen);
+    });
     return {};
   }
 };
 
-const _hoisted_1$4 = /*#__PURE__*/createStaticVNode("<div class=\"container\" data-v-5a151e4f><svg width=\"500px\" height=\"200px\" viewBox=\"0 0 500 200\" data-v-5a151e4f><rect class=\"rect\" x=\"10\" y=\"10\" width=\"100px\" height=\"50px\" fill=\"none\" stroke-width=\"5\" stroke=\"pink\" data-v-5a151e4f></rect></svg></div><div class=\"container\" data-v-5a151e4f><!-- 这里的 viewBox 和画布的宽高是一样的, 所以可以省略不写 --><svg width=\"440\" height=\"440\" viewBox=\"0 0 440 440\" data-v-5a151e4f><circle cx=\"220\" cy=\"220\" r=\"200\" stroke-width=\"20\" stroke=\"#d1d3d7\" fill=\"transparent\" data-v-5a151e4f></circle><circle class=\"circle\" cx=\"220\" cy=\"220\" r=\"200\" stroke-width=\"20\" stroke=\"#00a5e0\" fill=\"none\" transform=\"matrix(0 -1 1 0 0 440)\" data-v-5a151e4f></circle></svg></div>", 2);
+const _withScopeId = n => (pushScopeId("data-v-5a151e4f"),n=n(),popScopeId(),n);
+const _hoisted_1$4 = /*#__PURE__*/createStaticVNode("<div class=\"container\" data-v-5a151e4f><svg width=\"500px\" height=\"200px\" viewBox=\"0 0 500 200\" data-v-5a151e4f><rect class=\"rect\" x=\"10\" y=\"10\" width=\"100px\" height=\"50px\" fill=\"none\" stroke-width=\"5\" stroke=\"pink\" data-v-5a151e4f></rect></svg></div><div class=\"container\" data-v-5a151e4f><svg width=\"440\" height=\"440\" viewBox=\"0 0 440 440\" data-v-5a151e4f><circle cx=\"220\" cy=\"220\" r=\"200\" stroke-width=\"20\" stroke=\"#d1d3d7\" fill=\"transparent\" data-v-5a151e4f></circle><circle class=\"circle\" cx=\"220\" cy=\"220\" r=\"200\" stroke-width=\"20\" stroke=\"#00a5e0\" fill=\"none\" transform=\"matrix(0 -1 1 0 0 440)\" data-v-5a151e4f></circle></svg></div>", 2);
+const _hoisted_3$1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/createElementVNode("div", { class: "container" }, [
+  /*#__PURE__*/createElementVNode("svg", {
+    width: "200",
+    height: "200",
+    viewBox: "0 0 1025 1024"
+  }, [
+    /*#__PURE__*/createElementVNode("path", {
+      class: "logo",
+      id: "emoji",
+      d: "M256.001473 408.004475c0 30.294527 24.556772 54.851298 54.861526 54.851298 30.294527 0 54.851298-24.556772 54.851298-54.851298 0-30.304754-24.556772-54.861526-54.851298-54.861527-30.304754 0-54.861526 24.556772-54.861526 54.861527z m402.287175 0c0 30.294527 24.556772 54.851298 54.851299 54.851298s54.861526-24.556772 54.861526-54.851298c0-30.304754-24.567-54.861526-54.861526-54.861527s-54.851298 24.556772-54.851299 54.861527zM512.001473 0C229.255967 0 0.001473 229.254495 0.001473 512c0 282.745505 229.254495 512 512 512 282.745505 0 512-229.254495 512-512C1024.001473 229.254495 794.746978 0 512.001473 0z m300.572433 812.572433c-39.090372 39.080144-84.573072 69.712185-135.20032 91.200639-52.222773 22.173712-107.882062 33.373072-165.372113 33.373073-57.479824 0-113.139113-11.199361-165.484619-33.373073-50.627247-21.375949-96.109948-52.120495-135.200319-91.200639-39.090372-39.090372-69.712185-84.573072-91.20064-135.20032-22.050979-52.222773-33.25034-107.882062-33.250339-165.372113 0-57.479824 11.199361-113.139113 33.373072-165.484618 21.375949-50.627247 52.120495-96.109948 91.200639-135.20032s84.573072-69.712185 135.20032-91.200639C398.86236 98.063444 454.521649 86.864083 512.001473 86.864083c57.490052 0 113.149341 11.199361 165.484618 33.373072 50.627247 21.375949 96.120176 52.120495 135.20032 91.20064 39.080144 39.080144 69.712185 84.573072 91.200639 135.200319 22.061207 52.222773 33.260567 107.882062 33.260567 165.361886 0 57.490052-11.199361 113.149341-33.373072 165.484618-21.375949 50.627247-52.120495 96.109948-91.200639 135.087815zM685.719411 535.994247H630.74538c-4.796804 0-8.90835 3.661526-9.256093 8.45833-4.336556 56.569557-51.772753 101.254495-109.487814 101.254495s-105.253536-44.684938-109.477587-101.254495c-0.347743-4.796804-4.459289-8.45833-9.256093-8.45833h-54.974031c-5.257052 0-9.378825 4.336556-9.143588 9.603835 5.032042 96.334958 85.145825 173.247463 182.861527 173.247463 97.715701 0 177.829485-76.912505 182.861526-173.247463 0.214782-5.257052-3.896764-9.603835-9.153816-9.603835z m0 0",
+      fill: "#2C2C2C",
+      "p-id": "1559"
+    })
+  ])
+], -1 /* HOISTED */));
+const _hoisted_4 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/createElementVNode("div", { class: "container" }, [
+  /*#__PURE__*/createElementVNode("svg", {
+    class: "line-container",
+    width: "400",
+    height: "400",
+    viewBox: "0 0 400 400"
+  }, [
+    /*#__PURE__*/createElementVNode("line", {
+      class: "line",
+      x1: "0",
+      y1: "50",
+      x2: "400",
+      y2: "50",
+      fill: "none",
+      stroke: "red",
+      "stroke-width": "20"
+    })
+  ])
+], -1 /* HOISTED */));
 
 function render$4(_ctx, _cache) {
-  return _hoisted_1$4
+  return (openBlock(), createElementBlock(Fragment, null, [
+    _hoisted_1$4,
+    _hoisted_3$1,
+    _hoisted_4
+  ], 64 /* STABLE_FRAGMENT */))
 }
 
-var css_248z$3 = ".container[data-v-5a151e4f] svg[data-v-5a151e4f] {\n  border: 1px solid #000;\n}\n\n.rect[data-v-5a151e4f] {\n  stroke-dasharray: 10 20 30;\n}\n\n.circle[data-v-5a151e4f] {\n  animation: circle-5a151e4f 5s linear infinite;\n}\n\n@keyframes circle-5a151e4f {\n  from {\n    stroke-dasharray: 0 1257;\n  }\n  to {\n    stroke-dasharray: 1257 0;\n  }\n}";
+var css_248z$3 = ".container[data-v-5a151e4f] svg[data-v-5a151e4f] {\n  border: 1px solid #000;\n}\n\n.rect[data-v-5a151e4f] {\n  stroke-dasharray: 10 20 30;\n}\n\n.circle[data-v-5a151e4f] {\n  animation: circle-5a151e4f 5s linear infinite;\n}\n\n.line[data-v-5a151e4f] {\n  stroke-dasharray: 400;\n  stroke-dashoffset: 400;\n  transition: stroke-dashoffset 0.5s ease-out;\n}\n\n.line-container[data-v-5a151e4f][data-v-5a151e4f]:hover .line[data-v-5a151e4f] {\n  stroke-dashoffset: 0;\n}\n\n.logo[data-v-5a151e4f] {\n  fill: none;\n  stroke: #333;\n  stroke-width: 5;\n  animation: logo-5a151e4f 5s linear 1 forwards;\n}\n\n@keyframes circle-5a151e4f {\n  from {\n    stroke-dasharray: 0 1257;\n  }\n  to {\n    stroke-dasharray: 1257 0;\n  }\n}\n@keyframes logo-5a151e4f {\n  0% {\n    fill: white;\n    stroke: #333;\n    stroke-dasharray: 7630;\n    stroke-dashoffset: 7630;\n  }\n  50% {\n    fill: white;\n    stroke: #333;\n    stroke-dasharray: 7630;\n    stroke-dashoffset: 0;\n  }\n  75% {\n    fill: lightgreen;\n    stroke: white;\n  }\n  100% {\n    fill: skyblue;\n    stroke: white;\n  }\n}";
 styleInject(css_248z$3);
 
 script$4.render = render$4;
