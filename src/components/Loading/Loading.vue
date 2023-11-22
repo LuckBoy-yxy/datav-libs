@@ -15,7 +15,22 @@
         stroke-dasharray="34 34"
         stroke-linecap="round"
       >
-
+        <!-- from="0 25 25" to="360 25 25" -->
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="rotate"
+          values="0 25 25; 360 25 25"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+        <animate
+          attributeName="stroke"
+          attributeType="XML"
+          values="#3be6cb; #02bcfe; #3be6cb"
+          dur="4s"
+          repeatCount="indefinite"
+        />
       </circle>
 
       <circle
@@ -28,7 +43,22 @@
         stroke-dasharray="19 19"
         stroke-linecap="round"
       >
-
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="rotate"
+          from="360 25 25"
+          to="0 25 25"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+        <animate
+          attributeName="stroke"
+          attributeType="XML"
+          values="#02bcfe; #3be6cb; #02bcfe"
+          dur="4s"
+          repeatCount="indefinite"
+        />
       </circle>
     </svg>
   </div>

@@ -329,6 +329,36 @@
   //
   //
   //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
 
   var script$5 = {
     name: 'LoadingCom',
@@ -338,32 +368,7 @@
   };
 
   const _hoisted_1$5 = { class: "loading" };
-  const _hoisted_2$2 = /*#__PURE__*/vue.createElementVNode("svg", {
-    width: "200",
-    height: "200",
-    viewBox: "0 0 50 50"
-  }, [
-    /*#__PURE__*/vue.createElementVNode("circle", {
-      cx: "25",
-      cy: "25",
-      r: "22",
-      fill: "none",
-      stroke: "#3be6cb",
-      "stroke-width": "3",
-      "stroke-dasharray": "34 34",
-      "stroke-linecap": "round"
-    }),
-    /*#__PURE__*/vue.createElementVNode("circle", {
-      cx: "25",
-      cy: "25",
-      r: "12",
-      fill: "none",
-      stroke: "#02bcfe",
-      "stroke-width": "3",
-      "stroke-dasharray": "19 19",
-      "stroke-linecap": "round"
-    })
-  ], -1 /* HOISTED */);
+  const _hoisted_2$2 = /*#__PURE__*/vue.createStaticVNode("<svg width=\"200\" height=\"200\" viewBox=\"0 0 50 50\"><circle cx=\"25\" cy=\"25\" r=\"22\" fill=\"none\" stroke=\"#3be6cb\" stroke-width=\"3\" stroke-dasharray=\"34 34\" stroke-linecap=\"round\"><!-- from=&quot;0 25 25&quot; to=&quot;360 25 25&quot; --><animateTransform attributeName=\"transform\" attributeType=\"XML\" type=\"rotate\" values=\"0 25 25; 360 25 25\" dur=\"2s\" repeatCount=\"indefinite\"></animateTransform><animate attributeName=\"stroke\" attributeType=\"XML\" values=\"#3be6cb; #02bcfe; #3be6cb\" dur=\"4s\" repeatCount=\"indefinite\"></animate></circle><circle cx=\"25\" cy=\"25\" r=\"12\" fill=\"none\" stroke=\"#02bcfe\" stroke-width=\"3\" stroke-dasharray=\"19 19\" stroke-linecap=\"round\"><animateTransform attributeName=\"transform\" attributeType=\"XML\" type=\"rotate\" from=\"360 25 25\" to=\"0 25 25\" dur=\"2s\" repeatCount=\"indefinite\"></animateTransform><animate attributeName=\"stroke\" attributeType=\"XML\" values=\"#02bcfe; #3be6cb; #02bcfe\" dur=\"4s\" repeatCount=\"indefinite\"></animate></circle></svg>", 1);
   const _hoisted_3$2 = [
     _hoisted_2$2
   ];
