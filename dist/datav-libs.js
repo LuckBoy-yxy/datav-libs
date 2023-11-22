@@ -294,90 +294,128 @@
   }
 
   //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-
   var script$5 = {
     name: 'LoadingCom',
-    setup: function setup() {
-      return {};
+    props: {
+      width: {
+        type: [Number, String],
+        "default": 50
+      },
+      height: {
+        type: [Number, String],
+        "default": 50
+      },
+      outsideColor: {
+        type: String,
+        "default": '#3be6cb'
+      },
+      insideColor: {
+        type: String,
+        "default": '#02bcfe'
+      },
+      duration: {
+        type: [Number, String],
+        "default": 2
+      }
+    },
+    setup: function setup(props) {
+      var outsideColorAnimation = vue.computed(function () {
+        return "".concat(props.outsideColor, "; ").concat(props.insideColor, "; ").concat(props.outsideColor);
+      });
+      var insideColorAnimation = vue.computed(function () {
+        return "".concat(props.insideColor, "; ").concat(props.outsideColor, "; ").concat(props.insideColor);
+      });
+      return {
+        outsideColorAnimation: outsideColorAnimation,
+        insideColorAnimation: insideColorAnimation
+      };
     }
   };
 
   const _hoisted_1$5 = { class: "loading" };
-  const _hoisted_2$2 = /*#__PURE__*/vue.createStaticVNode("<svg width=\"200\" height=\"200\" viewBox=\"0 0 50 50\"><circle cx=\"25\" cy=\"25\" r=\"22\" fill=\"none\" stroke=\"#3be6cb\" stroke-width=\"3\" stroke-dasharray=\"34 34\" stroke-linecap=\"round\"><!-- from=&quot;0 25 25&quot; to=&quot;360 25 25&quot; --><animateTransform attributeName=\"transform\" attributeType=\"XML\" type=\"rotate\" values=\"0 25 25; 360 25 25\" dur=\"2s\" repeatCount=\"indefinite\"></animateTransform><animate attributeName=\"stroke\" attributeType=\"XML\" values=\"#3be6cb; #02bcfe; #3be6cb\" dur=\"4s\" repeatCount=\"indefinite\"></animate></circle><circle cx=\"25\" cy=\"25\" r=\"12\" fill=\"none\" stroke=\"#02bcfe\" stroke-width=\"3\" stroke-dasharray=\"19 19\" stroke-linecap=\"round\"><animateTransform attributeName=\"transform\" attributeType=\"XML\" type=\"rotate\" from=\"360 25 25\" to=\"0 25 25\" dur=\"2s\" repeatCount=\"indefinite\"></animateTransform><animate attributeName=\"stroke\" attributeType=\"XML\" values=\"#02bcfe; #3be6cb; #02bcfe\" dur=\"4s\" repeatCount=\"indefinite\"></animate></circle></svg>", 1);
-  const _hoisted_3$2 = [
-    _hoisted_2$2
-  ];
+  const _hoisted_2$2 = ["width", "height"];
+  const _hoisted_3$2 = ["stroke"];
+  const _hoisted_4$1 = ["dur"];
+  const _hoisted_5 = ["values", "dur"];
+  const _hoisted_6 = ["stroke"];
+  const _hoisted_7 = ["dur"];
+  const _hoisted_8 = ["values", "dur"];
+  const _hoisted_9 = { class: "loading-text" };
 
   function render$5(_ctx, _cache) {
-    return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$5, [..._hoisted_3$2]))
+    return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$5, [
+      (vue.openBlock(), vue.createElementBlock("svg", {
+        width: _ctx.width,
+        height: _ctx.height,
+        viewBox: "0 0 50 50",
+        preserveAspectRatio: "xMidYMid meet"
+      }, [
+        vue.createElementVNode("circle", {
+          cx: "25",
+          cy: "25",
+          r: "22",
+          fill: "none",
+          stroke: _ctx.outsideColor,
+          "stroke-width": "3",
+          "stroke-dasharray": "34 34",
+          "stroke-linecap": "round"
+        }, [
+          vue.createElementVNode("animateTransform", {
+            attributeName: "transform",
+            attributeType: "XML",
+            type: "rotate",
+            values: "0 25 25; 360 25 25",
+            dur: _ctx.duration + 's',
+            repeatCount: "indefinite"
+          }, null, 8 /* PROPS */, _hoisted_4$1),
+          vue.createCommentVNode(" #3be6cb; #02bcfe; #3be6cb "),
+          vue.createElementVNode("animate", {
+            attributeName: "stroke",
+            attributeType: "XML",
+            values: _ctx.outsideColorAnimation,
+            dur: _ctx.duration * 2 + 's',
+            repeatCount: "indefinite"
+          }, null, 8 /* PROPS */, _hoisted_5)
+        ], 8 /* PROPS */, _hoisted_3$2),
+        vue.createElementVNode("circle", {
+          cx: "25",
+          cy: "25",
+          r: "12",
+          fill: "none",
+          stroke: _ctx.insideColor,
+          "stroke-width": "3",
+          "stroke-dasharray": "19 19",
+          "stroke-linecap": "round"
+        }, [
+          vue.createElementVNode("animateTransform", {
+            attributeName: "transform",
+            attributeType: "XML",
+            type: "rotate",
+            from: "360 25 25",
+            to: "0 25 25",
+            dur: _ctx.duration + 's',
+            repeatCount: "indefinite"
+          }, null, 8 /* PROPS */, _hoisted_7),
+          vue.createElementVNode("animate", {
+            attributeName: "stroke",
+            attributeType: "XML",
+            values: _ctx.insideColorAnimation,
+            dur: _ctx.duration * 2 + 's',
+            repeatCount: "indefinite"
+          }, null, 8 /* PROPS */, _hoisted_8)
+        ], 8 /* PROPS */, _hoisted_6)
+      ], 8 /* PROPS */, _hoisted_2$2)),
+      vue.createElementVNode("div", _hoisted_9, [
+        vue.renderSlot(_ctx.$slots, "default")
+      ])
+    ]))
   }
 
+  var css_248z$4 = ".loading[data-v-416d18c9] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.loading[data-v-416d18c9] .loading-text[data-v-416d18c9] {\n  margin-top: 25px;\n  font-size: 20px;\n  color: skyblue;\n}";
+  styleInject(css_248z$4);
+
   script$5.render = render$5;
+  script$5.__scopeId = "data-v-416d18c9";
   script$5.__file = "src/components/Loading/Loading.vue";
 
   function LoadingCom (Vue) {
