@@ -155,6 +155,134 @@
       </circle>
     </svg>
   </div>
+
+  <div class="container">
+    <svg
+      width="200"
+      height="200"
+    >
+      <rect
+        x="0"
+        y="0"
+        fill="red"
+        width="10"
+        height="10"
+      >
+        <animateMotion
+          path="M10 10 L100 10 L100 100 L10 100 Z"
+          dur="5s"
+          rotate="0"
+          fill="freeze"
+          repeatCount="2"
+        ></animateMotion>
+      </rect>
+
+      <path
+        d="M10 10 L110 10 L110 110 L10 110 Z"
+        fill="none"
+        stroke="green"
+      ></path>
+    </svg>
+  </div>
+
+  <div class="container">
+    <svg
+      width="200"
+      height="200"
+    >
+      <rect
+        x="0"
+        y="0"
+        fill="red"
+        width="10"
+        height="10"
+      >
+        <animateMotion
+          id="forward-rect"
+          path="M10 10 L100 10 L100 100 L10 100"
+          dur="5s"
+          rotate="0"
+          fill="freeze"
+          begin="0; backward-rect.end + 0.5s"
+        />
+
+        <animateMotion
+          id="backward-rect"
+          path="M10 100 L100 100 L100 10 L10 10"
+          dur="5s"
+          rotate="0"
+          fill="freeze"
+          begin="forward-rect.end + 0.5s"
+        />
+
+        <animate
+          id="red-to-blue"
+          attributeName="fill"
+          attributeType="XML"
+          from="red"
+          to="blue"
+          dur="5s"
+          fill="freeze"
+          begin="0; blue-to-red.end + 0.5s"
+        />
+
+        <animate
+          id="blue-to-red"
+          attributeName="fill"
+          attributeType="XML"
+          from="blue"
+          to="red"
+          dur="5s"
+          fill="freeze"
+          begin="red-to-blue.end + 0.5s"
+        />
+      </rect>
+
+      <path
+        d="M10 10 L110 10 L110 110 L10 110"
+        fill="none"
+        stroke="green"
+      ></path>
+    </svg>
+  </div>
+
+  <div class="container">
+    <svg viewBox="0 0 200 200" width="200" height="200">
+      <rect id="rect1" x="0" y="0" rx="0" ry="0" width="100" height="100" fill="red">
+        <animate
+          attributeType="XML"
+          attributeName="fill"
+          from="red"
+          to="green"
+          begin="rect1.click"
+          dur="2s"
+          fill="freeze"
+        />
+      </rect>
+      <rect x="0" y="100" width="100" height="100" fill="blue">
+        <animate
+          attributeType="XML"
+          attributeName="fill"
+          from="blue"
+          to="green"
+          begin="rect1.click"
+          dur="2s"
+          fill="freeze"
+        />
+      </rect>
+
+      <animateTransform
+        attributeType="XML"
+        attributeName="transform"
+        type="translate"
+        from="0, 0"
+        to="50, 50"
+        begin="rect1.click"
+        dur="2s"
+        fill="freeze"
+      />
+    </svg>
+  </div>
 </template>
 
 <script>

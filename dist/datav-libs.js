@@ -272,7 +272,7 @@
       })
     ])
   ], -1 /* HOISTED */));
-  const _hoisted_4 = /*#__PURE__*/vue.createStaticVNode("<div class=\"container\" data-v-5a151e4f><svg class=\"line-container\" width=\"400\" height=\"400\" viewBox=\"0 0 400 400\" data-v-5a151e4f><line class=\"line\" x1=\"0\" y1=\"50\" x2=\"400\" y2=\"50\" fill=\"none\" stroke=\"red\" stroke-width=\"20\" data-v-5a151e4f></line></svg></div><div class=\"container\" data-v-5a151e4f><svg width=\"200\" height=\"200\" data-v-5a151e4f><rect x=\"0\" y=\"0\" fill=\"red\" width=\"100\" height=\"50\" data-v-5a151e4f><set attributeName=\"x\" attributeType=\"XML\" to=\"10\" begin=\"1s\" data-v-5a151e4f></set><set attributeName=\"x\" attributeType=\"XML\" to=\"20\" begin=\"2s\" data-v-5a151e4f></set><set attributeName=\"fill\" attributeType=\"XML\" to=\"skyblue\" begin=\"3s\" data-v-5a151e4f></set></rect></svg></div><div class=\"container\" data-v-5a151e4f><svg width=\"200\" height=\"200\" data-v-5a151e4f><circle cx=\"0\" cy=\"0\" r=\"30\" fill=\"blue\" stroke=\"black\" stroke-width=\"1\" data-v-5a151e4f><animate attributeName=\"cx\" attributeType=\"XML\" from=\"0\" to=\"100\" dur=\"3s\" repeatCount=\"2\" fill=\"freeze\" data-v-5a151e4f></animate><animate attributeName=\"cy\" attributeType=\"XML\" from=\"0\" to=\"100\" dur=\"3s\" repeatCount=\"2\" fill=\"freeze\" data-v-5a151e4f></animate><animate attributeName=\"fill\" attributeType=\"XML\" from=\"blue\" to=\"red\" dur=\"3s\" repeatCount=\"2\" fill=\"freeze\" data-v-5a151e4f></animate><animateTransform attributeName=\"transform\" attributeType=\"XML\" begin=\"0\" type=\"scale\" from=\"1\" to=\"2\" dur=\"3s\" repeatCount=\"2\" fill=\"freeze\" data-v-5a151e4f></animateTransform></circle></svg></div>", 3);
+  const _hoisted_4 = /*#__PURE__*/vue.createStaticVNode("<div class=\"container\" data-v-5a151e4f><svg class=\"line-container\" width=\"400\" height=\"400\" viewBox=\"0 0 400 400\" data-v-5a151e4f><line class=\"line\" x1=\"0\" y1=\"50\" x2=\"400\" y2=\"50\" fill=\"none\" stroke=\"red\" stroke-width=\"20\" data-v-5a151e4f></line></svg></div><div class=\"container\" data-v-5a151e4f><svg width=\"200\" height=\"200\" data-v-5a151e4f><rect x=\"0\" y=\"0\" fill=\"red\" width=\"100\" height=\"50\" data-v-5a151e4f><set attributeName=\"x\" attributeType=\"XML\" to=\"10\" begin=\"1s\" data-v-5a151e4f></set><set attributeName=\"x\" attributeType=\"XML\" to=\"20\" begin=\"2s\" data-v-5a151e4f></set><set attributeName=\"fill\" attributeType=\"XML\" to=\"skyblue\" begin=\"3s\" data-v-5a151e4f></set></rect></svg></div><div class=\"container\" data-v-5a151e4f><svg width=\"200\" height=\"200\" data-v-5a151e4f><circle cx=\"0\" cy=\"0\" r=\"30\" fill=\"blue\" stroke=\"black\" stroke-width=\"1\" data-v-5a151e4f><animate attributeName=\"cx\" attributeType=\"XML\" from=\"0\" to=\"100\" dur=\"3s\" repeatCount=\"2\" fill=\"freeze\" data-v-5a151e4f></animate><animate attributeName=\"cy\" attributeType=\"XML\" from=\"0\" to=\"100\" dur=\"3s\" repeatCount=\"2\" fill=\"freeze\" data-v-5a151e4f></animate><animate attributeName=\"fill\" attributeType=\"XML\" from=\"blue\" to=\"red\" dur=\"3s\" repeatCount=\"2\" fill=\"freeze\" data-v-5a151e4f></animate><animateTransform attributeName=\"transform\" attributeType=\"XML\" begin=\"0\" type=\"scale\" from=\"1\" to=\"2\" dur=\"3s\" repeatCount=\"2\" fill=\"freeze\" data-v-5a151e4f></animateTransform></circle></svg></div><div class=\"container\" data-v-5a151e4f><svg width=\"200\" height=\"200\" data-v-5a151e4f><rect x=\"0\" y=\"0\" fill=\"red\" width=\"10\" height=\"10\" data-v-5a151e4f><animateMotion path=\"M10 10 L100 10 L100 100 L10 100 Z\" dur=\"5s\" rotate=\"0\" fill=\"freeze\" repeatCount=\"2\" data-v-5a151e4f></animateMotion></rect><path d=\"M10 10 L110 10 L110 110 L10 110 Z\" fill=\"none\" stroke=\"green\" data-v-5a151e4f></path></svg></div><div class=\"container\" data-v-5a151e4f><svg width=\"200\" height=\"200\" data-v-5a151e4f><rect x=\"0\" y=\"0\" fill=\"red\" width=\"10\" height=\"10\" data-v-5a151e4f><animateMotion id=\"forward-rect\" path=\"M10 10 L100 10 L100 100 L10 100\" dur=\"5s\" rotate=\"0\" fill=\"freeze\" begin=\"0; backward-rect.end + 0.5s\" data-v-5a151e4f></animateMotion><animateMotion id=\"backward-rect\" path=\"M10 100 L100 100 L100 10 L10 10\" dur=\"5s\" rotate=\"0\" fill=\"freeze\" begin=\"forward-rect.end + 0.5s\" data-v-5a151e4f></animateMotion><animate id=\"red-to-blue\" attributeName=\"fill\" attributeType=\"XML\" from=\"red\" to=\"blue\" dur=\"5s\" fill=\"freeze\" begin=\"0; blue-to-red.end + 0.5s\" data-v-5a151e4f></animate><animate id=\"blue-to-red\" attributeName=\"fill\" attributeType=\"XML\" from=\"blue\" to=\"red\" dur=\"5s\" fill=\"freeze\" begin=\"red-to-blue.end + 0.5s\" data-v-5a151e4f></animate></rect><path d=\"M10 10 L110 10 L110 110 L10 110\" fill=\"none\" stroke=\"green\" data-v-5a151e4f></path></svg></div><div class=\"container\" data-v-5a151e4f><svg viewBox=\"0 0 200 200\" width=\"200\" height=\"200\" data-v-5a151e4f><rect id=\"rect1\" x=\"0\" y=\"0\" rx=\"0\" ry=\"0\" width=\"100\" height=\"100\" fill=\"red\" data-v-5a151e4f><animate attributeType=\"XML\" attributeName=\"fill\" from=\"red\" to=\"green\" begin=\"rect1.click\" dur=\"2s\" fill=\"freeze\" data-v-5a151e4f></animate></rect><rect x=\"0\" y=\"100\" width=\"100\" height=\"100\" fill=\"blue\" data-v-5a151e4f><animate attributeType=\"XML\" attributeName=\"fill\" from=\"blue\" to=\"green\" begin=\"rect1.click\" dur=\"2s\" fill=\"freeze\" data-v-5a151e4f></animate></rect><animateTransform attributeType=\"XML\" attributeName=\"transform\" type=\"translate\" from=\"0, 0\" to=\"50, 50\" begin=\"rect1.click\" dur=\"2s\" fill=\"freeze\" data-v-5a151e4f></animateTransform></svg></div>", 6);
 
   function render$4(_ctx, _cache) {
     return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
@@ -293,12 +293,99 @@
     Vue.component(script$4.name, script$4);
   }
 
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+
+  var script$5 = {
+    name: 'LoadingCom',
+    setup: function setup() {
+      return {};
+    }
+  };
+
+  const _hoisted_1$5 = { class: "loading" };
+  const _hoisted_2$2 = /*#__PURE__*/vue.createElementVNode("svg", {
+    width: "200",
+    height: "200",
+    viewBox: "0 0 50 50"
+  }, [
+    /*#__PURE__*/vue.createElementVNode("circle", {
+      cx: "25",
+      cy: "25",
+      r: "22",
+      fill: "none",
+      stroke: "#3be6cb",
+      "stroke-width": "3",
+      "stroke-dasharray": "34 34",
+      "stroke-linecap": "round"
+    }),
+    /*#__PURE__*/vue.createElementVNode("circle", {
+      cx: "25",
+      cy: "25",
+      r: "12",
+      fill: "none",
+      stroke: "#02bcfe",
+      "stroke-width": "3",
+      "stroke-dasharray": "19 19",
+      "stroke-linecap": "round"
+    })
+  ], -1 /* HOISTED */);
+  const _hoisted_3$2 = [
+    _hoisted_2$2
+  ];
+
+  function render$5(_ctx, _cache) {
+    return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$5, [..._hoisted_3$2]))
+  }
+
+  script$5.render = render$5;
+  script$5.__file = "src/components/Loading/Loading.vue";
+
+  function LoadingCom (Vue) {
+    Vue.component(script$5.name, script$5);
+  }
+
   function index (Vue) {
     Vue.use(Test);
     Vue.use(Test1);
     Vue.use(Test2);
     Vue.use(IconCom);
     Vue.use(SvgAnimation);
+    Vue.use(LoadingCom);
   }
 
   return index;
